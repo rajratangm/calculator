@@ -30,10 +30,7 @@ function App() {
 
   const calculate = () => {
 
-    try {setResult(eval(result));}
-    catch(e){
-      setResult('Error')
-    }
+    try {setResult(eval(result));
     // setText(result)
   };
 

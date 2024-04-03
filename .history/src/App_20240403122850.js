@@ -31,9 +31,7 @@ function App() {
   const calculate = () => {
 
     try {setResult(eval(result));}
-    catch(e){
-      setResult('Error')
-    }
+    catch(e)
     // setText(result)
   };
 

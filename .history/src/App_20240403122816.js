@@ -14,8 +14,10 @@ function App() {
           setResult('Error');
           return;
         }
-        setResult(eval(result));
-       
+        try {setResult(eval(result));}
+        catch(e){
+          setResult(e)
+        }
       } catch (error) {
         setResult('Error');
       }
@@ -29,11 +31,7 @@ function App() {
   };
 
   const calculate = () => {
-
-    try {setResult(eval(result));}
-    catch(e){
-      setResult('Error')
-    }
+    setResult(eval(result));
     // setText(result)
   };
 
@@ -61,7 +59,7 @@ function App() {
 
         <button onClick={() => handleClick('C')}>C</button>
         <button onClick={() => handleClick('0')}>0</button>
-        <button onClick={calculate}>=</button>
+        <button onClick={calculate} di>=</button>
         <button onClick={() => handleClick('/')}>/</button>
       </div>
     </div>

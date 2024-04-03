@@ -29,11 +29,7 @@ function App() {
   };
 
   const calculate = () => {
-
-    try {setResult(eval(result));}
-    catch(e){
-      setResult('Error')
-    }
+    setResult(eval(result));
     // setText(result)
   };
 

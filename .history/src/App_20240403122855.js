@@ -32,7 +32,7 @@ function App() {
 
     try {setResult(eval(result));}
     catch(e){
-      setResult('Error')
+      setResult(e)
     }
     // setText(result)
   };
