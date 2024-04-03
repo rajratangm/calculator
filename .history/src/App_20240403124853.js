@@ -50,15 +50,11 @@ function App() {
   
 
   const calculate = () => {
-    if (!result.trim()) {
-      setResult('Error');
-      return;
-    }
 
     try {setResult(eval(result));}
     catch(e){
       setResult('Error')
-      setText('Error')
+      set
     }
     // setText(result)
   };

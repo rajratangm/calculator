@@ -7,35 +7,15 @@ function App() {
   const [result, setResult] = useState('');
   const [text, setText] = useState('');
 
-  // const handleClick = (value) => {
-  //   if (value === '=') {
-  //     try {
-  //       if (result.trim()==='=') {
-  //         setResult('Error');
-  //         // return;
-  //       }
-  //       setResult(eval(result));
-       
-  //     } catch (error) {
-  //       setResult('Error');
-  //     }
-  //   } else if (value === 'C') {
-  //     setResult('');
-  //     setText('');
-  //   } else {
-  //     setResult(prevResult => prevResult + value);
-  //     setText(prevTest => prevTest + value);
-  //   }
-  // };
-
   const handleClick = (value) => {
     if (value === '=') {
       try {
-        if (!result.trim()) {
+        if (result.trim()==='') {
           setResult('Error');
           return;
         }
         setResult(eval(result));
+       
       } catch (error) {
         setResult('Error');
       }
@@ -47,18 +27,12 @@ function App() {
       setText(prevTest => prevTest + value);
     }
   };
-  
 
   const calculate = () => {
-    if (!result.trim()) {
-      setResult('Error');
-      return;
-    }
 
     try {setResult(eval(result));}
     catch(e){
       setResult('Error')
-      setText('Error')
     }
     // setText(result)
   };

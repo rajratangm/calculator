@@ -50,10 +50,7 @@ function App() {
   
 
   const calculate = () => {
-    if (!result.trim()) {
-      setResult('Error');
-      return;
-    }
+    if 
 
     try {setResult(eval(result));}
     catch(e){
