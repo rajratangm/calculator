@@ -59,7 +59,7 @@ function App() {
 
         <button onClick={() => handleClick('C')}>C</button>
         <button onClick={() => handleClick('0')}>0</button>
-        <button onClick={calculate} >=</button>
+        <button onClick={calculate} disah('/')}>=</button>
         <button onClick={() => handleClick('/')}>/</button>
       </div>
     </div>
