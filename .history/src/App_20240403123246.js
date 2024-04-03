@@ -1,6 +1,6 @@
 
 
-import './App.css';
+// import './App.css';
 // import { useState } from 'react';
 
 // function App() {
@@ -69,47 +69,3 @@ import './App.css';
 // }
 
 // export default App;
-
-
-// import "./styles.css";
-
-import React, { useState } from "react";
-
-function App() {
-  const [displayValue, setDisplayValue] = useState("");
-  const [result, setResult] = useState("");
-
-  const handleButtonClick = (value) => {
-    if (value === "=") {
-      try {
-        const calculatedResult = eval(displayValue);
-        setResult(calculatedResult);
-      } catch (error) {
-        setResult("Error");
-      }
-    } else if (value === "C") {
-      setDisplayValue("");
-      setResult("");
-    } else {
-      setDisplayValue((prevValue) => prevValue + value);
-    }
-  };
-
-  return (
-    <div className="App">
-      <input type="text" value={displayValue} readOnly />
-      <div>{result}</div>
-      <div className="buttons">
-        {[7, 8, 9, "+", 4, 5, 6, "-", 1, 2, 3, "*", 0, "/", "=", "C"].map(
-          (value, index) => (
-            <button key={index} onClick={() => handleButtonClick(value)}>
-              {value}
-            </button>
-          )
-        )}
-      </div>
-    </div>
-  );
-}
-
-export default App;

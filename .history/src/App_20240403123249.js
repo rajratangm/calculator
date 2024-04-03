@@ -1,6 +1,6 @@
 
 
-import './App.css';
+// import './App.css';
 // import { useState } from 'react';
 
 // function App() {
@@ -71,7 +71,7 @@ import './App.css';
 // export default App;
 
 
-// import "./styles.css";
+import "./styles.css";
 
 import React, { useState } from "react";
 
