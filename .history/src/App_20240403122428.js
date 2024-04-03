@@ -14,10 +14,7 @@ function App() {
           setResult('Error');
           return;
         }
-        try {setResult(eval(result));}
-        catch(e){
-          setResult(e)
-        }
+        setResult(eval(result));
       } catch (error) {
         setResult('Error');
       }
