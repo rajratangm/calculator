@@ -1,0 +1,10 @@
+*{
+  font-family: 'Robot', 'sans-serif';
+  font-size: 18px;
+
+}
+
+body{
+  display: flex;
+  justify-content: center;
+}
